@@ -26,3 +26,16 @@ gcc calculator.c -o calculator
 
 gcc calculator.c -o calculator.exe
 ./calculator.exe (IN VS CODE INTERMINAL AFTER OPENING THE FILE )
+
+Enter first number: 12
+Enter operator (+, -, *, /): *
+Enter second number: 5
+Result: 60.00
+Do you want to calculate again? (y/n): y
+
+Enter first number: 20
+Enter operator (+, -, *, /): /
+Enter second number: 0
+Error: Cannot divide by zero.
+Do you want to calculate again? (y/n): n
+
