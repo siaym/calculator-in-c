@@ -27,6 +27,8 @@ gcc calculator.c -o calculator
 gcc calculator.c -o calculator.exe
 ./calculator.exe (IN VS CODE INTERMINAL AFTER OPENING THE FILE )
 
+🧪 Sample Output
+
 Enter first number: 12
 Enter operator (+, -, *, /): *
 Enter second number: 5
