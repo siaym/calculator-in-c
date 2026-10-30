@@ -1,0 +1,26 @@
+name: C Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Compile calculator with GCC
+      run: gcc -Wall -Wextra -Werror -pedantic -std=c99 calculator.c -o calculator
+
+    - name: Run automated test case (Addition)
+      run: |
+        printf "15\n+\n35\nn\n" | ./calculator | grep "Result: 50.00"
+
+    - name: Run automated test case (Divide by Zero)
+      run: |
+        printf "100\n/\n0\nn\n" | ./calculator | grep "Error: Cannot divide by zero."
